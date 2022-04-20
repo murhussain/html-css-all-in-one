@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #444;
+  border-top: #1099ad solid 10px;
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  /* margin-bottom: 60px; */
+}
+
+/* article {
+  margin-bottom: 60px;
+} */
+
+nav {
+  font-size: 18px;
+  /* text-align: center; */
+}
+
+nav a:link {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1099ad;
+  border-bottom: 5px solid #1099ad;
+  padding: 50px 0;
+  /* width: 500px; */
+}
+
+aside h4 {
+  margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1099ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  color: black;
+  background-color: yellow;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+}
+.post-header {
+  margin-bottom: 40px;
+}
+h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 18px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+.related {
+  list-style: none;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+/* li:nth-child(odd) {
+  color: rebeccapurple;
+} */
+
+/* this has no effect on the page. */
+
+/* article p:first-child{
+  color: red;
+} */
+
+/* Styling HyperLinks */
+a:link {
+  color: #1099ad;
+  text-decoration: none;
+}
+a:visited {
+  color: #1099ad;
+}
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.posy-img {
+  width: 100%;
+  height: auto;
+}
+
+.btny-down {
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* FLOATING TECH */
+
+/* .author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+.author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+nav {
+  float: right;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+article {
+  width: 700px;
+  float: left;
+}
+aside {
+  width: 500;
+  float: right;
+}
+footer {
+  clear: both;
+} */
+
+/* FLEX-BOX TECHNOLOGY */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* FLEX-BOX */
+
+/* .raw {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 40px;
+}
+
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+aside {
+  
+  DEFAULTS:
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto; 
+ 
+  flex: 0 0 300px;
+} */
+
+/* CSS GRID IMPLEMENTATION HERE */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+.main-header {
+  /* grid-column: 1 / span 2; */
+  grid-column: 1 / -1;
+}
+article {
+}
+aside {
+}
+footer {
+  grid-column: 1 / -1;
+}
